@@ -36,7 +36,7 @@ The three main concepts for this structure is as follows:
 
 1. Everything should be self-contained (as far as possible) within a single git repository
 2. Minimise hard-disk footprint: link, do not copy
-3. Every component should follow a logical flow, being easily be linked together, and followable by an outsider
+3. Every component should follow a logical flow, being easily linked together, and followable by an outsider
 
 For **points 1 and 2**, this means that all links should be relative to the repository itself. By doing, so, this prevents ballooning hard-disk space usage that occurs by repeatedly copying the same large files used in input for different analyses.
 
@@ -48,7 +48,7 @@ Scripts, notebooks, and similar should utilise relative paths where the reposito
 >tool_b --input ../analysis_A/output_A.txt --output output_b
 >```
 
-Alternatively, symbolic links (symlinks) can also be alternatively utilised, e.g. generated with `ln -s`, to refer to files within a given directory, even if stored in a different one. Symlinks should still be made relative within the repository.
+Alternatively, symbolic links (symlinks) can also be utilised, e.g. generated with `ln -s`, to refer to files within a given directory, even if stored in a different one. Symlinks should still be made relative within the repository.
 
 > :open_book: Example:
 >
@@ -266,11 +266,11 @@ For example, there could be a quality control set of files indicated with the ke
 
 This is a recommended directory that contains documents or files that can be useful for summarising main results, including interpretation, and ultimately can be used to help inform the writing of the final publication. It will be uploaded to the online Git repository.
 
-This directory can include things such as presentation slides, or finalised notebooks that summarise the outcomes of each different analysis section. For the latter, these files should gather and aggregate various output files from `05-results`, perform different summary analyses, and generate summary plots and figures in a reproducible manner. In this case we again recommend to use software environment managers or containers to allow for such notebooks to be executed in away that allows for such reproducibility.
+This directory can include things such as presentation slides, or finalised notebooks that summarise the outcomes of each different analysis section. For the latter, these files should gather and aggregate various output files from `05-results`, perform different summary analyses, and generate summary plots and figures in a reproducible manner. In this case we again recommend to use software environment managers or containers to allow for such notebooks to be executed in a way that allows for such reproducibility.
 
 It is also recommended to organise these in analysis-batch specific directories or prefixes that correspond to the input files in `05-results`.
 
-These reports or notebooks can go into more technical detail that any file for the final publication, including describing explorations and/or failures for future prosperity. Not all the contents of these reports will necessarily go into the `07-publication` directory.
+These reports or notebooks can go into more technical detail than any file for the final publication, including describing explorations and/or failures for future prosperity. Not all the contents of these reports will necessarily go into the `07-publication` directory.
 
 ### `07-publication/`
 
